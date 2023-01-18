@@ -8,4 +8,4 @@ Nathnael Yimer    UGR/6855/13  1
 Dagmawi Tensay    UGR/0443/13  3
 Ephrem Shimels    UGR/8099/13  2
 Natnael Dejene    UGR/4254/13  2
-Birhanu Asmamaw   UGR/..../13  2
+Birhanu Asmamaw   UGR/2204/13  2
