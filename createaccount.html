@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link rel="stylesheet" href="plugin/script2.js">
+    <link rel="stylesheet" href="plugin/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <title>Online Pc Market</title>
+  <style>
+    .input-field.success input {
+    border-color: #088178;
+    }
+  .input-field.error input {
+    border-color: rgb(225, 70, 56);
+   }
+ .input-field .error {
+    color: rgba(226, 59, 33, 0.876);
+    font-size: 9px;
+    height: 13px;
+}
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand"><img src="img/logo.jpg" alt="pc logo" /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link px-4" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4" href="buy.html">Buy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active px-4" href="createaccount.html">Create Account</a>
+            </li>
+          </ul>
+          <div class="float-right">
+            <a href="cart.html"><i class="bi bi-cart text-dark px-5"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="vh-75 bg-image py-5 mb-5">
+      <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+              <div class="card" style="border-radius: 15px;">
+                <div class="card-body p-5">
+                  <form class="was-validated" id="form" action="/">
+                    <div class="form-outline mb-4 input-field">
+                      <label class="form-label" for="username">User name</label>
+                      <input type="text" id="username" name="username" class="form-control form-control-lg" required/>
+                      <div class="invalid-feedback">please choose a username</div>
+                      <div class="error"></div>
+                    </div>
+                    <div class="form-outline mb-4 input-field">
+                      <label class="form-label" for="email">Email</label>
+                      <input type="email" id="email" name="email" class="form-control form-control-lg" required/>
+                      <div class="invalid-feedback">Please choose a correct vaild username</div>
+                      <div class="error"></div>
+                    </div>
+                    <div class="form-outline mb-4 input-field">
+                      <label class="form-label" for="password">Password</label>
+                      <input type="password" id="password" name="password" class="form-control form-control-lg" required/>
+                      <div class="invalid-feedback">please choose strong password</div>
+                      <div class="error"></div>
+                    </div>
+                    <div class="form-outline mb-4 input-field">
+                      <label class="form-label" for="password2">password Again</label>
+                      <input type="password" id="password2" name="password2" class="form-control form-control-lg" required/>
+                      <div class="invalid-feedback">retype ypur password again</div>
+                      <div class="error"></div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                      <button type="submit" class="btn btn-info btn-block btn-lg gradient-custom-4 text-body">Signup</button>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+    </section>
+    <footer class="text-center text-lg-start bg-white text-muted">
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3">
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <img src="img/logo.jpg" alt="logo" style="height: 10vh;width: 10vh;">
+                <p>Secure Payment via</p>
+                <img src="img/telebirr-logo.png" alt="telebirr-logo" style="height: 10vh;width: 10vh;">
+                <img src="img/CBE.jpg" alt="CBE logo" style="height: 10vh;width: 10vh;">
+              </div>
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">
+                  My Account
+                </h6>
+                <p>
+                  <a href="#!" class="text-reset">sign-in</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Veiw cart</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">help me</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">contact_us</a>
+                </p>
+              </div>
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">
+                  About
+                </h6>
+                <p>
+                  <a href="#!" class="text-reset">About-us</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Delivery</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">terms and condition</a>
+                </p>
+              </div>
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                <p><span class="font-weight-bold">Address:</span> killo,Addis Ababa,Ethiopia</p>
+                <p><span class="font-weight-bold">phone:</span>+251920409545</p>
+                <div class="d-flex justify-content-center">
+                <a href="" class="me-4 link-secondary">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                </div>
+              </div>
+            </section>
+            </div>
+          </div>
+    </footer>
+    <script src="plugin/js/bootstrap.min.js"></script>
+   </body>
+   </html>
