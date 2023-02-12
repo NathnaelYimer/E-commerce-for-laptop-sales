@@ -1,32 +1,22 @@
-const form = {
-    userName: document.getElementById('userName'),
-    password: document.getElementById('password'),
-    submit: document.getElementsById('submit'),
-};
+async function validateAdmin() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    
+    const response = await fetch("http://localhost:3000/admin/signin", {
+    method: "POST",
+    body: JSON.stringify({ username, password}),
+    redirect: 'manual',
+    headers: {
+      "Content-Type": "application/json",
+        },
+    });
+    
+    if (response.ok) {
+        console.log("Sign up successful!");
+        window.location.href = './updateproductdetails.html';
+    } else {
+        const credentialError =  document.getElementById('credential');
+        credentialError.innerHTML = 'Incorrect username or password'
+    }
 
-
-let button = form.submit.addEventListener("click", (e)=> {
-    e.preventDefault();
-    const login = '';
-
-    fetch(login, {
-          method: "POST",
-          headers: {
-            Accept: "application/json, text/plain, */*",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            userName: form.userName.value,
-            password: form.password.value,
-          }),
-        })
-          .then((response) => response.json())
-          .then((data) => console.log(data))
-          .catch((err) => {
-            console.log(err);
-           });
-});
-
-
-
-
+}
