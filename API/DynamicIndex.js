@@ -1,4 +1,4 @@
-fetch('http://localhost:3333/store/products/getallproducts').then((data)=>{
+fetch('http://localhost:3000/store/products/getallproducts').then((data)=>{
     return data.json();
 }).then((completedata)=>{
     // document.getElementById('root').
