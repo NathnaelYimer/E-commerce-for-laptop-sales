@@ -1,0 +1,12 @@
+#laptops{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#laptopBuy{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
