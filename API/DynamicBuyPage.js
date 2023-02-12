@@ -1,4 +1,4 @@
-fetch('http://localhost:3333/store/products/getallproducts').then((data)=>{
+fetch('http://localhost:3000/store/products/getallproducts').then((data)=>{
     return data.json();
 }).then((completedata)=>{
     // document.getElementById('root').
@@ -30,7 +30,7 @@ completedata.map((values)=>{
             <h2 class="text-info font-weight-bold">${values.price}</h2>
             </div>
 
-            <a href="specificproduct.html" class="w-100 align-self-end m-0"><button type="button" class="btn btn-info  w-100" onclick=buttonclick"(${id=values.product_id})" id="${values.product_id}">ADD to Cart</button> </a> 
+         <button type="button" class="btn btn-info  w-100 align-self-end m-0" onclick=buttonclick"(${id=values.product_id})" id="${values.product_id}">ADD to Cart</button> 
          </div>`
          
     });
