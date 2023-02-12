@@ -1,0 +1,84 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  admin_id   Int       @id @default(autoincrement())
+  username   String    @unique @db.VarChar(50)
+  password   String    @db.VarChar(255)
+  created_at DateTime? @default(now()) @db.Timestamp(0)
+
+  @@map("admin")
+}
+
+model Customer {
+  customer_id Int       @id @default(autoincrement())
+  first_name  String    @db.VarChar(50)
+  last_name   String    @db.VarChar(50)
+  email       String    @unique(map: "email") @db.VarChar(100)
+  password    String    @db.VarChar(255)
+  created_at  DateTime? @default(now()) @db.Timestamp(0)
+  hashedRt    String?   @db.VarChar(255)
+
+  @@map("customers")
+}
+
+model OrderItems {
+  order_item_id Int       @id @default(autoincrement())
+  order_id      Int
+  product_id    Int
+  quantity      Int
+  created_at    DateTime? @default(now()) @db.Timestamp(0)
+
+  @@index([order_id], map: "order_id")
+  @@index([product_id], map: "product_id")
+  @@map("order_items")
+}
+
+model Orders {
+  order_id     Int       @id @default(autoincrement())
+  order_date   DateTime  @db.Date
+  total_amount Decimal   @db.Decimal(10, 2)
+  created_at   DateTime? @default(now()) @db.Timestamp(0)
+  customer_id  Int
+
+  @@index([customer_id], map: "customer_id")
+  @@map("orders")
+}
+
+model Product {
+  product_id  Int       @id @default(autoincrement())
+  name        String    @db.VarChar(255)
+  description String    @db.Text
+  image_url   String    @db.VarChar(255)
+  price       Decimal   @db.Decimal(10, 2)
+  created_at  DateTime? @default(now()) @db.Timestamp(0)
+
+  @@map("products")
+}
+
+model cart {
+  cart_id      Int       @id @default(autoincrement())
+  customer_id  Int
+  order_id     Int
+  total_amount Decimal   @db.Decimal(10, 2)
+  created_at   DateTime? @default(now()) @db.Timestamp(0)
+
+  @@index([customer_id], map: "customer_id")
+  @@index([customer_id], map: "order_id")
+}
+
+model items_in_cart {
+  current_in_id Int   @id @default(autoincrement())
+  cart_id     Int
+  product_id  Int
+  num_of_item Int?
+  price       Int?
+
+  @@index([product_id], map: "product_id")
+}
