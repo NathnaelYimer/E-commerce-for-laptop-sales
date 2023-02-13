@@ -52,7 +52,7 @@
                       <label class="form-label" for="TEXT1">INSERT HEADING FOR THE PRODUCT</label>
                       <input
                         type="text"
-                        id="TEXT1"
+                        id="name"
                         name="INSERT HEADING FOR THE PRODUCT"
                         class="form-control form-control-lg"
                         required
@@ -62,11 +62,22 @@
                       <label class="form-label" for="Price">Price of the Product</label>
                       <input
                         type="text"
-                        id="Price"
+                        id="price"
                         name="Price of the Product"
                         class="form-control form-control-lg"
                         required
                       />
+                    </div>
+                    <div class="form-outline mb-4 input-field">
+                      <label class="form-label" for="textAreaExample3">
+                          Enter image url
+                      </label>
+                      <input
+                      class="form-control form-control-lg"
+                      type="text"
+                      id="img-url"
+                      rows="2"
+                    ></input>
                     </div>
                     <div class="form-outline mb-4 input-field">
                         <label class="form-label" for="textAreaExample3">
@@ -74,14 +85,15 @@
                         </label>
                         <textarea
                         class="form-control"
-                        id="textAreaExample3"
+                        id="description"
                         rows="2"
                       ></textarea>
                       </div>
                     <div class="d-flex justify-content-center">
                       <button
                         type="submit"
-                        class="btn btn-info btn-block btn-lg gradient-custom-4 text-body">
+                        class="btn btn-info btn-block btn-lg gradient-custom-4 text-body"
+                        onclick="addfunction()">
                         Add
                       </button>
                     </div>
@@ -94,5 +106,6 @@
       </div>
     </section>
     <script src="plugin/js/bootstrap.min.js"></script>
+    <script src="../API/adminAdd.js"></script>
   </body>
 </html>
