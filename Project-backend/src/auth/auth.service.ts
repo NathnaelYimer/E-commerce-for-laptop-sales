@@ -8,7 +8,6 @@ import { ConfigService } from '@nestjs/config';
 import { Tokens } from './types';
 import { UserService } from 'src/users/user.service';
 
-
 @Injectable({})
 export class AuthService {
   private userService: UserService;
