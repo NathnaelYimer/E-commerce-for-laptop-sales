@@ -11,12 +11,10 @@ import { AuthModule } from 'src/auth/auth.module';
 import { AuthService } from 'src/auth/auth.service';
 import { JwtModule, JwtService } from '@nestjs/jwt';
 
-
 @Module({
  imports: [ProductModule,UserModule,PrismaModule,AuthModule],
  controllers: [CartController],
  providers: [CartService, ProductService,PrismaService,UserService,AuthService,JwtService],
  exports: [CartModule]
 })
-
 export class CartModule {}
