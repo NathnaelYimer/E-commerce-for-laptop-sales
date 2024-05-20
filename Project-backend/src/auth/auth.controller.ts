@@ -10,7 +10,6 @@ import { Public } from './common/decorators/public.decorator';
 @Controller()
 export class AuthController {
   constructor(private authService: AuthService) {}
-  
   @Public()
   @Post('signup')
 
